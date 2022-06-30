@@ -14,8 +14,8 @@ Cerchiamo di fare almeno un commit per ogni milestone!
 //Rimuoviamo le celle che abbiamo inserito nell'HTML in modo da generarle tramite JS. 
 //Al click del bottone play, vengono generate 100 celle in 10 righe da 10 celle ciascuna.
 
-#MILESTONE 3
-In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
+//#MILESTONE 3
+//In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
 
 #MILESTONE 4
 Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
@@ -50,10 +50,17 @@ const totalCells= rows * cells;
 for (let i = 1; i <= totalCells; i++){
 
     //Creo la cella 
-    const cell = createCell(i);
+    const newCell = createCell(i);
+
+    //-Creo la logica per cui quando clicco sulla cella si colora e mi esce in console il numero della cella che ho cliccato
+    newCell.addEventListener('click', function(event){
+        console.log('Hai cliccato la cella numero: ' + newCell.innerText)
+
+        event.target.classList.toggle('active-color')
+    })
 
     //Aggancio la cella alla griglia
-    gridNumber.append(cell);
+    gridNumber.append(newCell);
 }
 
 
