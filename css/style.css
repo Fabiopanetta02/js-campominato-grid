@@ -2,6 +2,8 @@
     --verde-acqua: #7FFFD4;
 } 
 
+
+/* Generic */
 body{
  overflow-y: hidden;
 }
@@ -10,6 +12,14 @@ main{
     background-color: var(--verde-acqua);
 }
 
+footer{
+    line-height: 70px;
+}
+
+
+/************
+    UTILS  
+*************/
 .row{
     padding-top: 80px;
     padding-bottom: 80px;
@@ -17,10 +27,6 @@ main{
     width: 1160px;
     height: 1160px;
     visibility: hidden;
-}
-
-.active{
-    visibility: visible;
 }
 
 .row > .cell{
@@ -36,10 +42,14 @@ main{
 
 }
 
-.active-color{
-    background-color: lightblue;
+
+/***************
+CLASSI ACTIVE JS
+****************/
+.active{
+    visibility: visible;
 }
 
-footer{
-    line-height: 70px;
+.active-color{
+    background-color: cornflowerblue;
 }

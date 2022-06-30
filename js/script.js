@@ -17,8 +17,8 @@ Cerchiamo di fare almeno un commit per ogni milestone!
 //#MILESTONE 3
 //In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
 
-#MILESTONE 4
-Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
+//#MILESTONE 4
+//Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
 
 # BONUS
 Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
@@ -27,7 +27,9 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 
-//*FUNZIONI
+
+
+//*FUNZIONI*//
 function createCell(content){
     const cell = document.createElement('div');
     cell.className= 'cell';
@@ -52,11 +54,12 @@ for (let i = 1; i <= totalCells; i++){
     //Creo la cella 
     const newCell = createCell(i);
 
-    //-Creo la logica per cui quando clicco sulla cella si colora e mi esce in console il numero della cella che ho cliccato
-    newCell.addEventListener('click', function(event){
+    /*-Creo la logica per cui quando clicco sulla cella si colora,  
+    e mi esce in console il numero della cella che ho cliccato*/
+    newCell.addEventListener('click', function(){
         console.log('Hai cliccato la cella numero: ' + newCell.innerText)
 
-        event.target.classList.toggle('active-color')
+        newCell.classList.toggle('active-color')
     })
 
     //Aggancio la cella alla griglia
