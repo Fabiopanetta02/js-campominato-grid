@@ -13,11 +13,19 @@ main{
 .row{
     padding-top: 80px;
     padding-bottom: 80px;
+    margin: 0 auto;
+    width: 1160px;
+    height: 1160px;
+    visibility: hidden;
+}
+
+.active{
+    visibility: visible;
 }
 
 .row > div{
     width: calc(100% / 10);
-    height: 100px;
+    height: calc(100% / 10);
     border: 2px solid black;
 }
 

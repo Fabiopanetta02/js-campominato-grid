@@ -7,8 +7,8 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 Procediamo milestone per milestone senza invertire l'ordine.
 Cerchiamo di fare almeno un commit per ogni milestone!
 
-# MILESTONE 1
-Prepariamo l'HTML ed il CSS per ottenere il risultato grafico che vediamo nell'immagine allegata.
+//# MILESTONE 1
+//Prepariamo l'HTML ed il CSS per ottenere il risultato grafico che vediamo nell'immagine allegata.
 
 #MILESTONE 2
 Rimuoviamo le celle che abbiamo inserito nell'HTML in modo da generarle tramite JS. 
@@ -26,3 +26,26 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
+
+// !1- Recupero gli elementi con l'id
+const buttonPlay = document.getElementById('play');
+const gridNumber = document.getElementById('grid');
+
+
+// !2- Mi preparo delle condizioni inziali
+const rows = 10;
+const cells = 10;
+const totalCells= rows * cells;
+
+
+// !3- Creo le celle per 100 volte e li metto in pagina
+for (let i = 0; i < totalCells; i++){
+    const cell = document.createElement('div');
+    gridNumber.append(cell);
+}
+
+
+// !4-Faccio comparire la griglia 
+buttonPlay.addEventListener('click', function(){
+    gridNumber.classList.add('active');
+})
